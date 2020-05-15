@@ -34,21 +34,7 @@ const IndexPage = () => {
         <Layout >
             <Head title="Home"/>
             <div className={indexStyles.table}>
-                <div className={indexStyles.right}>
-                    <ol className={indexStyles.posts}>
-                        {data.allContentfulBlogPost.edges.map(edge => {
-                            return(
-                                <li className={indexStyles.post}>
-                                    <Link to={`/blog/${edge.node.slug}`}>
-                                        <h2>Item</h2>
-                                    </Link>
-                                    <br/>
-                                </li>
-                            )
-                        })}
-                    </ol>
-                </div>
-                <div className={indexStyles.middle}>
+            <div className={indexStyles.middle}>
                     <ol className={indexStyles.posts}>
                         {data.allContentfulBlogPost.edges.map(edge => {
                             return(
@@ -71,6 +57,20 @@ const IndexPage = () => {
                                 <li className={indexStyles.post}>
                                     <Link to={`/blog/${edge.node.slug}`}>
                                         <h2>{edge.node.title}</h2>
+                                    </Link>
+                                    <br/>
+                                </li>
+                            )
+                        })}
+                    </ol>
+                </div>
+                <div className={indexStyles.right}>
+                    <ol className={indexStyles.posts}>
+                        {data.allContentfulBlogPost.edges.map(edge => {
+                            return(
+                                <li className={indexStyles.post}>
+                                    <Link to={`/blog/${edge.node.slug}`}>
+                                        <h2>Item</h2>
                                     </Link>
                                     <br/>
                                 </li>

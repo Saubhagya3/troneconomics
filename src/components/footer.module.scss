@@ -1,0 +1,122 @@
+.footer{
+    margin-top: 3rem;
+    width: 100%;
+    height: 180px;
+    background:#111111;
+    position: fixed; left: 0; bottom: 0;
+    z-index: -1;
+}
+
+.top {
+  display: block;
+}
+    
+.left{
+    width: 30%;
+    padding-left: 5rem;
+    text-align: left;
+    float:left;
+    padding-top: 40px;
+}
+
+.right{
+    width: 30%;
+    padding-left: 5rem;
+    text-align: left;
+    float: right;
+    padding-top: 40px;
+}
+
+.footer p {
+    color: #e9e9e9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+.footer h3 {
+    color: #e9e9e9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer a {
+    color: #69ff69;
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+ul li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.footer a:hover {
+    color: #338333;
+}
+
+//Social Media Link Design
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
+.bottom {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: -1;
+  div {
+		padding-bottom: 65px;
+		text-align: center;
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: inline;
+			margin: 0;
+			padding: 5px;
+		}
+		a {
+			border-bottom: 0px solid rgba(0,0,0,0.95);
+			border-radius: 4px;
+			box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0), 0 6px 8px rgba(0,0,0,0), 0 24px 24px rgba(0,0,0,0), 0 36px 36px rgba(0,0,0,0), 0 64px 64px rgba(0,0,0,0), 0 64px 128px rgba(0,0,0,0), 0 120px 0 rgba(0,0,0,0), 0 86px 8px 6px rgba(0,0,0,0),;
+			display: inline-block;
+      height: 30px;
+			padding: 20px;
+			position: relative;
+			transition: .2s ease-in;
+      width: 30px;
+			svg {
+        left: 20px;
+        position: absolute;
+        top: 20px;
+				height: 30px;
+				width: 30px;
+        &.glow {
+          path, circle {
+            fill: rgba(0,0,0,0);
+          }
+        }
+				path, circle {
+					fill: #69ff69;
+					transition: .2s ease-in;
+				}
+			}
+		}
+		a:hover {
+			transform: translateY(-4px);
+			box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0.1), 0 6px 8px rgba(0,0,0,0.05), 0 24px 24px rgba(0,0,0,0.05), 0 36px 36px rgba(0,0,0,0.05), 0 64px 64px rgba(0,0,0,0.15), 0 64px 128px rgba(0,0,0,0.15), 0 86px 8px 6px fadeout(#0ebac7, 75), 0 83px 4px 0px fadeout(#338333, 5);
+			svg {
+        &.glow {
+          filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+          filter: blur(2px);
+          path, circle {
+            fill: fadeout(#338333, 40);
+          }
+        }
+				path, circle {
+					fill: #338333;
+				}
+			}
+		}
+	}
+}

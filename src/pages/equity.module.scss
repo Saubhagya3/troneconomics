@@ -1,0 +1,34 @@
+.posts {
+    list-style-type: none;
+    margin: 0;
+}
+
+.equityTitle {
+    padding-left: 1rem;
+}
+
+.post {
+    margin: 1rem 0;
+
+    a {
+        background: #f4f4f4;
+        color: #222222;
+        text-decoration: none;
+        display: block;
+        padding: 1rem;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .date {
+        color: #338333;
+        padding-top: 3px;
+        font-size: .8rem;
+    }
+}

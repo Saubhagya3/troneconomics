@@ -1,0 +1,27 @@
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 180px;
+    margin-bottom: 180px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    background: #f3f3f3;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+@media screen and (max-width: 1150px) {
+    .container {
+      padding: 1rem;
+      margin-top: 0;
+    }
+}
+
+.content {
+    flex-grow: 1;
+}

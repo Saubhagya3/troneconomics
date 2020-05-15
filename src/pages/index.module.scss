@@ -1,0 +1,78 @@
+@import url(//db.onlinewebfonts.com/c/0730b06a4e228d07698e9231ae777227?family=Copyright+Klim+Type+Foundry);
+
+@font-face {
+  font-family: FinancierX; 
+  src: url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.eot"); 
+  src: url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.eot?#iefix") 
+  format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.woff2") 
+  format("woff2"), url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.woff") 
+  format("woff"), url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.ttf") 
+  format("truetype"), 
+  url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.svg#Copyright Klim Type Foundry") 
+  format("svg"); 
+}
+
+.posts {
+    list-style-type: none;
+    margin: 0;
+}
+
+.table{
+    border-top: solid thin #e7e7e7;
+}
+
+.post {
+    margin: 1rem;
+    border-bottom: solid thin #dadada;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    a {
+        background: #f4f4f4;
+        color: #222222;
+        text-decoration: none;
+        display: block;
+        padding: 1rem;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .date {
+        color: #338333;
+        padding-top: 3px;
+        font-size: .8rem;
+    }
+
+}
+  
+.left {
+    float: left;
+    width: 42%;
+    border-right: solid thin #dadada;
+}
+
+.middle {
+    float: left;
+    width: 33%;
+    border-right: solid thin #dadada;
+}
+
+.right {
+    float: right;
+    width: 25%;
+}
+
+@media screen and (max-width: 1150px) {
+    .left, .middle, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+      border: none;
+    }
+}
+
+  

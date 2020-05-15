@@ -40,6 +40,9 @@ const Header = () => {
                         {data.site.siteMetadata.title}
                     </Link> 
                 </h1>
+                <div>
+                    <p><a href="#">Login</a> | <a href="#">Subscribe</a></p>
+                </div>
             </div>
             <div className={headerStyles.mainnav}> 
                 <ul className={headerStyles.navList}>

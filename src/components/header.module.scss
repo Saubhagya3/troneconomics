@@ -10,9 +10,25 @@
     position: absolute; left: 0; top: 0;
     z-index: -1;
     text-align: center;
-    padding-top: 65px;
-}
+    padding-top: 55px;
+    padding-bottom: 50px;
 
+    div {
+        text-align: right;
+        margin-right: 80px;
+        padding-bottom: 10px;
+
+        p, a {
+            text-decoration: none;
+            color: #f8f8f8;
+            font-weight: normal;
+        }
+
+        a:hover {
+            color: #dadada;
+        }
+    }
+}
 
 .title {
     color: #f8f8f8;
@@ -45,7 +61,7 @@
 }
 
 .nav-item:hover {
-    background: linear-gradient(0deg, #dadada 0%, rgba(243,243,243,1) 100%);
+    background: linear-gradient(0deg, #dadada 0%, #f3f3f3 100%);
 }
 
 .active-nav-item{

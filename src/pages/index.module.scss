@@ -51,21 +51,21 @@
 
 }
   
-.left {
+.middle {
     float: left;
-    width: 42%;
+    width: 37%;
     border-right: solid thin #dadada;
 }
 
-.middle {
+.left {
     float: left;
-    width: 33%;
+    width: 30%;
     border-right: solid thin #dadada;
 }
 
 .right {
     float: right;
-    width: 25%;
+    width: 29%;
 }
 
 @media screen and (max-width: 1150px) {

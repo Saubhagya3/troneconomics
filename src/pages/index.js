@@ -34,7 +34,7 @@ const IndexPage = () => {
         <Layout >
             <Head title="Home"/>
             <div className={indexStyles.table}>
-                <div className={indexStyles.left}>
+                <div className={indexStyles.right}>
                     <ol className={indexStyles.posts}>
                         {data.allContentfulBlogPost.edges.map(edge => {
                             return(
@@ -64,7 +64,7 @@ const IndexPage = () => {
                         })}
                     </ol>
                 </div>
-                <div className={indexStyles.right}>
+                <div className={indexStyles.left}>
                     <ol className={indexStyles.posts}>
                         {data.allContentfulBlogPost.edges.map(edge => {
                             return(

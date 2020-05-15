@@ -10,7 +10,6 @@ const AboutPage = () => {
             <h1>About</h1>
             <h2>This is Tron Economics dedicated to all things economics and tech.</h2>
             <p>Please stay tuned for more content in the near future.</p>
-            <p>Want to know my details? <Link to="/contact">Contact me.</Link></p>
         </Layout>
     )
 }

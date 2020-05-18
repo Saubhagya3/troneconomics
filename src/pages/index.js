@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
 import indexStyles from './index.module.scss'
 import Head from '../components/head'
+import Image from '../templates/image'
 
 export const pageTitle = "Index"
 
@@ -25,6 +26,12 @@ const IndexPage = () => {
                 body {
                     json
                 }
+                image {
+                    title
+                    resize (width: 450, height: 180) {
+                      src
+                    }
+                  }
               }
             }
           }
@@ -40,6 +47,12 @@ const IndexPage = () => {
                             return(edge.node.page === 'breaking' ? 
                                 <li className={indexStyles.post}>
                                     <Link to={`/blog/${edge.node.slug}`}>
+                                        <div>
+                                            <img
+                                            src={edge.node.image.resize.src}
+                                            alt={edge.node.image.title}
+                                            />
+                                        </div>
                                         <h2>{edge.node.title}</h2>
                                         <p className={indexStyles.date}>{edge.node.publishedDate}</p>
                                         <p>{edge.node.summary}</p>
@@ -55,6 +68,12 @@ const IndexPage = () => {
                         {data.allContentfulBlogPost.edges.map(edge => {
                             return(edge.node.page === "general" ?
                                 <li className={indexStyles.post}>
+                                        <div>
+                                            <img
+                                            src={edge.node.image.resize.src}
+                                            alt={edge.node.image.title}
+                                            />
+                                        </div>
                                     <Link to={`/blog/${edge.node.slug}`}>
                                         <h2>{edge.node.title}</h2>
                                     </Link>

@@ -21,6 +21,12 @@ const EquityPage = () => {
                 publishedDate (formatString: "MMMM Do, YYYY")
                 summary
                 page
+                image {
+                    title
+                    resize (width: 450, height: 180) {
+                      src
+                    }
+                }
               }
             }
           }
@@ -36,6 +42,12 @@ const EquityPage = () => {
                         edge.node.page === "equity" ? (
                             <li className={equityStyles.post}>
                                 <Link to={`/blog/${edge.node.slug}`}>
+                                    <div>
+                                        <img
+                                        src={edge.node.image.resize.src}
+                                        alt={edge.node.image.title}
+                                        />
+                                    </div>
                                     <h2>{edge.node.title}</h2>
                                     <p className={equityStyles.date}>{edge.node.publishedDate}</p>
                                     <p>{edge.node.summary}</p>

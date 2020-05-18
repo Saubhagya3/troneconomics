@@ -21,6 +21,12 @@ const TechPage = () => {
                         page
                         summary
                         slug
+                        image {
+                            title
+                            resize (width: 450, height: 180) {
+                              src
+                            }
+                        }
                     }
                 }
             }
@@ -38,6 +44,12 @@ const TechPage = () => {
                             
                                 <li className = {techStyles.post}>
                                     <Link to={`/blog/${edge.node.slug}`}>
+                                        <div>
+                                            <img
+                                            src={edge.node.image.resize.src}
+                                            alt={edge.node.image.title}
+                                            />
+                                        </div>
                                         <h2>{edge.node.title}</h2>
                                         <p className={techStyles.date}>{edge.node.publishedDate}</p>
                                         <p>{edge.node.summary}</p>

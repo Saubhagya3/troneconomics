@@ -37,7 +37,7 @@ const IndexPage = () => {
             <div className={indexStyles.middle}>
                     <ol className={indexStyles.posts}>
                         {data.allContentfulBlogPost.edges.map(edge => {
-                            return(
+                            return(edge.node.page === 'breaking' ? 
                                 <li className={indexStyles.post}>
                                     <Link to={`/blog/${edge.node.slug}`}>
                                         <h2>{edge.node.title}</h2>
@@ -45,7 +45,7 @@ const IndexPage = () => {
                                         <p>{edge.node.summary}</p>
                                     </Link>
                                     <br/>
-                                </li>
+                                </li> : ("")
                             )
                         })}
                     </ol>
@@ -53,13 +53,13 @@ const IndexPage = () => {
                 <div className={indexStyles.left}>
                     <ol className={indexStyles.posts}>
                         {data.allContentfulBlogPost.edges.map(edge => {
-                            return(
+                            return(edge.node.page === "general" ?
                                 <li className={indexStyles.post}>
                                     <Link to={`/blog/${edge.node.slug}`}>
                                         <h2>{edge.node.title}</h2>
                                     </Link>
                                     <br/>
-                                </li>
+                                </li> : ("")
                             )
                         })}
                     </ol>

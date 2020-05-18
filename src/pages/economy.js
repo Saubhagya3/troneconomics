@@ -5,7 +5,6 @@ import economyStyles from './economy.module.scss'
 import Head from '../components/head'
 
 const EconomyPage = () => {
-    const pageTitle = "Economy"
     const data = useStaticQuery(graphql`
         query {
             allContentfulBlogPost (

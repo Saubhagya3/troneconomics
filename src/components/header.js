@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import headerStyles from './header.module.scss'
-import Title from './title'
 
 const Header = () => {
     const data = useStaticQuery(graphql`
@@ -26,17 +25,6 @@ const Header = () => {
             <div className={headerStyles.banner}>
                 <h1>
                     <Link className={headerStyles.title} to="/">
-                        {/* {data.allContentfulBlogPost.edges.map((edge) => {
-                            return (
-                                edge.node.page === 'tech' ? 
-                                <Title pageTitle= "Tech"/> :
-                                edge.node.page === 'economy' ?
-                                <Title pageTitle= "Economy"/>:
-                                edge.node.page === 'equity' ?
-                                <Title pageTitle= "Equity"/> :
-                                <Title />
-                        )})
-                        } */}
                         {data.site.siteMetadata.title}
                     </Link> 
                 </h1>

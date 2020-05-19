@@ -48,7 +48,7 @@ const Header = () => {
                 </ul>
                 </div>
                 <div className={headerStyles.login}>
-                    <p><a href="#">Sign In</a> | <a href="#">Subscribe</a></p>
+                    <p style={{color:'silver'}}><a href="#">Sign In</a> | <a href="#">Subscribe</a></p>
                 </div>
             </div>
         </header>

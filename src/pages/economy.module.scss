@@ -1,6 +1,19 @@
 .posts {
     list-style-type: none;
     margin: 0;
+    padding-left: 1rem;
+    width: 67%;
+    margin-bottom: 1%;
+    padding-right: 3%;
+    background-color: oldlace;
+    border-right: solid thin silver;
+}
+
+@media screen and (max-width: 850px) {
+    .posts {
+      width: 100%;
+      border: none;
+    }
 }
 
 .econTitle {

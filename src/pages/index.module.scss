@@ -19,13 +19,13 @@
 }
 
 .table{
-    border-top: solid thin #eeeeee;
+    border-top: solid thin silver;
     
 }
 
 .post {
     margin: 1rem;
-    border-bottom: solid thin #eeeeee;
+    border-bottom: solid thin silver;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background: oldlace;
 
@@ -57,7 +57,7 @@
 .middle {
     float: left;
     width: 37%;
-    border-right: solid thin #eeeeee;
+    border-right: solid thin silver;
 
     li:nth-of-type(1n+4) {
         display: none;
@@ -67,7 +67,7 @@
 .left {
     float: left;
     width: 30%;
-    border-right: solid thin #eeeeee;
+    border-right: solid thin silver;
 
     li:nth-of-type(1n+4) {
         display: none;

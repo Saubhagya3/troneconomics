@@ -22,6 +22,20 @@ const Header = () => {
     `) 
     return(
         <header className={headerStyles.header}>
+            <div className={headerStyles.ticker}>
+                <div className={headerStyles.tickerItem}>
+                    <p>Item One</p>
+                </div>
+                <div className={headerStyles.tickerItem}>
+                    <p>Item Two</p>
+                </div>
+                <div className={headerStyles.tickerItem}>
+                    <p>Item Three</p>
+                </div>
+                <div className={headerStyles.tickerItem}>
+                    <p>Item Four</p>
+                </div>
+            </div>
             <div className={headerStyles.banner}>
                 <h1 style={{color: '#4ca34c'}}>
                     <Link className={headerStyles.title} to="/">

@@ -1,71 +1,82 @@
 .header {
     padding: 0;
+    position: absolute; left: 0; top: 0;
+    width: 100%;
+    height: 27%;
+    background: #fffcf9;
+    // background-size: cover;
+    z-index: -1;
 }
 
 .banner {
-    width: 100%;
-    height: 180px;
-    background-image: url('../images/green-banner.jpg');
-    background-size: cover;
-    position: absolute; left: 0; top: 0;
-    z-index: -1;
     text-align: center;
-    padding-top: 55px;
-    padding-bottom: 50px;
-
-    div {
-        text-align: right;
-        margin-right: 80px;
-        padding-bottom: 10px;
-
-        p, a {
-            text-decoration: none;
-            color: #f8f8f8;
-            font-weight: normal;
-        }
-
-        a:hover {
-            color: #dadada;
-        }
-    }
+    padding-top: 20px;
+    background: inherit;
+    border-bottom: #eeeeee thin solid;
 }
 
 .title {
-    color: #f8f8f8;
+    color: #111111;
     font-size: 3.5rem;
     text-decoration: none;
 }
 
 .mainnav {
-    max-width: 92vw;
-    margin-right: 0;
-    -webkit-box-shadow: 0px 10px 5px -6px rgba(0,0,0,0.17);
-    -moz-box-shadow: 0px 10px 5px -6px rgba(0,0,0,0.17);
-    box-shadow: 0px 10px 5px -6px rgba(0,0,0,0.08);
-}
-
-.nav-list {
+    width: 100%;
+    background: transparent;
+    border-bottom: thin solid #777777;
     display: flex;
-    list-style-type: none;
-    align-items: left;
-    justify-content: left;
+    padding-top: .5rem;
+
+    .nav {
+        flex-grow: 1;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style-type: none;
+        align-items: left;
+        justify-content: left;
+        margin-left: 7rem;
+    }
+    
+    .nav-item {
+        color: #444444;
+        font-size: 1rem;
+        margin-right: .1rem;
+        text-decoration: none;
+        padding: 1rem;
+        padding-bottom: .4rem;
+    }
+
+    .nav-item:hover {
+        border-bottom: solid #444444;
+    }
+    
+    .active-nav-item{
+        color: #4ca34c;
+        border-bottom: solid #4ca34c;
+    }
+
+    .login {
+        align-items: right;
+        justify-content: right;
+        float: right;
+        margin-right: 80px;
+    
+        p, a {
+            text-decoration: none;
+            color: #444444;
+            font-weight: normal;
+        }
+    
+        a:hover {
+            color: #4ca34c;
+        }
+    }
 }
 
-.nav-item {
-    color: #444444;
-    font-size: 1rem;
-    margin-right: .1rem;
-    text-decoration: none;
-    padding: 1rem;
-    padding-bottom: .73rem;
-}
 
-.nav-item:hover {
-    background: linear-gradient(0deg, #dadada 0%, #f3f3f3 100%);
-}
 
-.active-nav-item{
-    color: #4ca34c;
-    background: linear-gradient(0deg, rgb(221, 221, 221) 0%, rgb(250, 250, 250) 100%);
-}
+
 

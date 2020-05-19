@@ -28,7 +28,7 @@ const IndexPage = () => {
                 }
                 image {
                     title
-                    resize (width: 450, height: 180) {
+                    resize (width: 450, height: 210) {
                       src
                     }
                   }
@@ -68,13 +68,13 @@ const IndexPage = () => {
                         {data.allContentfulBlogPost.edges.map(edge => {
                             return(edge.node.page === "general" ?
                                 <li className={indexStyles.post}>
-                                        <div>
+                                    <Link to={`/blog/${edge.node.slug}`}>
+                                        <div className= {indexStyles.leftImg}>
                                             <img
                                             src={edge.node.image.resize.src}
                                             alt={edge.node.image.title}
                                             />
                                         </div>
-                                    <Link to={`/blog/${edge.node.slug}`}>
                                         <h2>{edge.node.title}</h2>
                                     </Link>
                                     <br/>

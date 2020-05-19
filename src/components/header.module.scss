@@ -3,13 +3,13 @@
     margin: 0;
     position: absolute; left: 0; top: 0;
     width: 100%;
-    height: 22vh;
+    height: 24vh;
     background: oldlace;
     background-size: cover;
 }
 
 .ticker {
-    height: 4vh;
+    height: 5vh;
     width: 100%;
     background: #111111;
     position: absolute;
@@ -18,7 +18,8 @@
     padding-top: 3px;
 
     .tickerItem {
-        padding-left: 34vh;
+        padding-left: 10vh;
+        margin-left: 20vh;
     }
 }
 
@@ -40,7 +41,7 @@
 
 .title {
     color: #111111;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-decoration: none;
 }
 

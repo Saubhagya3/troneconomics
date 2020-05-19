@@ -51,7 +51,6 @@ const Header = () => {
                     <p><a href="#">Sign In</a> | <a href="#">Subscribe</a></p>
                 </div>
             </div>
-            
         </header>
     )
 }

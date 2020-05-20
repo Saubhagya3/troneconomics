@@ -31,8 +31,12 @@
         padding: 1rem;
     }
 
+    img:hover {
+        opacity: .8;
+    }
+
     a:hover {
-        text-decoration: underline;
+        color: #777777
     }
 
     h2 {

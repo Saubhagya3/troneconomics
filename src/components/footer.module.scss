@@ -47,7 +47,7 @@
 }
 
 .footer a {
-    color: #69ff69;
+    color:	#00A693;
     font-size: 1em;
     font-weight: 530;
     text-decoration: none;
@@ -59,7 +59,7 @@ ul li {
 }
 
 .footer a:hover {
-    color: #4ca34c;
+    color:	silver;
 }
 
 //Social Media Link Design
@@ -80,8 +80,8 @@ ul li {
 		}
 		li {
 			display: inline;
-			margin: 0;
-			padding: 5px;
+			margin-right: 5px;
+			padding: 0;
 		}
 		a {
 			border-bottom: 0px solid rgba(0,0,0,0.95);
@@ -105,24 +105,24 @@ ul li {
           }
         }
 				path, circle {
-					fill: #69ff69;
+					fill: #00A693;;
 					transition: .2s ease-in;
 				}
 			}
 		}
 		a:hover {
 			transform: translateY(-4px);
-			box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0.1), 0 6px 8px rgba(0,0,0,0.05), 0 24px 24px rgba(0,0,0,0.05), 0 36px 36px rgba(0,0,0,0.05), 0 64px 64px rgba(0,0,0,0.15), 0 64px 128px rgba(0,0,0,0.15), 0 86px 8px 6px fadeout(#4ca34c, 75), 0 83px 4px 0px fadeout(#4ca34c, 5);
+			box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0.1), 0 6px 8px rgba(0,0,0,0.05), 0 24px 24px rgba(0,0,0,0.05), 0 36px 36px rgba(0,0,0,0.05), 0 64px 64px rgba(0,0,0,0.15), 0 64px 128px rgba(0,0,0,0.15), 0 86px 8px 6px fadeout(silver, 75), 0 83px 4px 0px fadeout(silver, 5);
 			svg {
         &.glow {
           filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
           filter: blur(2px);
           path, circle {
-            fill: fadeout(#4ca34c, 40);
+            fill: fadeout(silver, 40);
           }
         }
 				path, circle {
-					fill: #4ca34c;
+					fill: silver;
 				}
 			}
 		}

@@ -4,7 +4,7 @@
     position: absolute; left: 0; top: 0;
     width: 100%;
     height: 150px;
-    background: oldlace;
+    background: #f7fcfe; //foam
     background-size: cover;
 }
 
@@ -87,8 +87,8 @@
     }
     
     .active-nav-item{
-        color: #4ca34c;
-        border-bottom: solid #4ca34c;
+        color: #00A693;
+        border-bottom: solid #00A693;
     }
 
     .login {
@@ -107,7 +107,7 @@
         }
     
         a:hover {
-            color: #4ca34c;
+            color: #00A693;
         }
     }
 

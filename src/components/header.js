@@ -37,7 +37,7 @@ const Header = () => {
                 </div>
             </div>
             <div className={headerStyles.banner}>
-                <h1 style={{color: '#4ca34c'}}>
+                <h1 style={{color: '#3EB489'}}>
                     <Link className={headerStyles.title} to="/">
                         {data.site.siteMetadata.title}
                     </Link>. 
@@ -62,7 +62,7 @@ const Header = () => {
                 </ul>
                 </div>
                 <div className={headerStyles.login}>
-                    <p style={{color:'silver'}}><a href="#">Sign In</a> | <a href="#">Subscribe</a></p>
+                    <p style={{color:'silver'}}><Link to="/404">Sign In</Link> | <Link to="/404">Subscribe</Link></p>
                 </div>
             </div>
         </header>

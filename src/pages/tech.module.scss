@@ -5,8 +5,7 @@
     width: 67%;
     margin-bottom: 1%;
     padding-right: 3%;
-    background-color: #f7fcfe;
-    border-right: solid thin silver;
+    border-right: solid thin black;
 }
 
 @media screen and (max-width: 850px) {
@@ -22,29 +21,31 @@
 
 .post {
     margin: 1rem 0;
+    margin-right: 0;
+    
 
     a {
-        background: #f7fcfe;
-        color: #222222;
+        color: #111111;
         text-decoration: none;
         display: block;
-        padding: 1rem;
+        padding: 0;
+        margin-right: 1rem;
     }
 
     img:hover {
-        opacity: .8;
+        opacity: .9;
     }
 
     a:hover {
-        color: #777777
+        color: #333333;
     }
-
+    
     h2 {
         margin-bottom: 0;
     }
 
     .date {
-        color: #00A693;
+        color: #333333;
         padding-top: 3px;
         font-size: .8rem;
     }

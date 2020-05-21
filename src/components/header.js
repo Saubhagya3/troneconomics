@@ -61,9 +61,9 @@ const Header = () => {
                     </li>
                 </ul>
                 </div>
-                <div className={headerStyles.login}>
+                {/* <div className={headerStyles.login}>
                     <p style={{color:'silver'}}><Link to="/404">Sign In</Link> | <Link to="/404">Subscribe</Link></p>
-                </div>
+                </div> */}
             </div>
         </header>
     )

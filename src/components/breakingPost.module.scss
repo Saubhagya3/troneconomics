@@ -1,0 +1,183 @@
+@import url(//db.onlinewebfonts.com/c/0730b06a4e228d07698e9231ae777227?family=Copyright+Klim+Type+Foundry);
+
+@font-face {
+  font-family: FinancierX; 
+  src: url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.eot"); 
+  src: url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.eot?#iefix") 
+  format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.woff2") 
+  format("woff2"), url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.woff") 
+  format("woff"), url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.ttf") 
+  format("truetype"), 
+  url("//db.onlinewebfonts.com/t/0730b06a4e228d07698e9231ae777227.svg#Copyright Klim Type Foundry") 
+  format("svg"); 
+}
+
+.main {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 4%;
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        padding-left: 0;
+    }
+}
+
+.posts {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+
+    li:nth-of-type(1n+5) {
+        display: none;
+    }
+}
+
+// @media screen and (max-width: 1000px) {
+//     .posts {
+//         li:nth-of-type(1n+4) {
+//             display: none;
+//         }
+//     }
+// }
+
+.post {
+    // border-bottom: solid thin silver;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 0;
+    margin-bottom:0;
+    width: 23%;
+    padding-right: 0;
+    margin-right: 20px;
+    float: left;
+    position: static;
+
+    .boxstyle {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        // .image {
+        //     float:left;
+        // }
+
+        .pageTitle {
+            text-transform: uppercase;
+            color: goldenrod;
+            margin-top:0;
+            padding-top: 0;
+            font-size: small;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: large;
+            margin-bottom: 0;
+        }
+        
+        p {
+            padding-top: 10px;
+            font-size: .86rem;
+            margin-bottom: 2px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            p {
+                display: none;
+            }
+        }
+
+        // .text {
+        //     padding-left: 20px;
+        //     max-width:10%;
+        // }
+    }
+    
+
+    a {
+        color: #111111;
+        text-decoration: none;
+        padding: 0;
+    }
+
+    a:hover {
+        h2{
+            text-decoration: underline;
+        }
+    }
+
+    img {
+        margin: 0;
+    }
+
+    img:hover {
+        opacity: .85;
+    }
+
+    
+    
+    .date {
+        color: #555555;
+        padding-top: 3px;
+        margin-bottom: 0;
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .post {
+        margin-right: 5px;
+    }
+}
+
+
+
+
+  
+// .middle {
+//     float: left;
+//     width: 40%;
+//     margin-right: 10px;
+
+//     li:nth-of-type(1n+4) {
+//         display: none;
+//       }
+// }
+
+// .left {
+//     float: left;
+//     width: 28%;
+
+//     li:nth-of-type(1n+4) {
+//         display: none;
+//       }
+
+    
+// }
+// // .leftImg {
+// //     width: 20vw;
+// //     height: 16vh;
+// //     background-size: cover;;
+// // }
+
+// .right {
+//     float: right;
+//     width: 25%;
+
+//     li:nth-of-type(1n+3) {
+//         display: none;
+//       }
+// }
+
+// @media screen and (max-width: 1100px) {
+//     .left, .middle, .right {
+//       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+//       border: none;
+//     }
+// }
+
+
+
+  

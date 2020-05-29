@@ -5,7 +5,6 @@ import techStyles from './tech.module.scss'
 import Head from '../components/head'
 
 const TechPage = () => {
-    const pageTitle = "Tech"
     const data = useStaticQuery(graphql`
         query {
             allContentfulBlogPost (
@@ -44,16 +43,17 @@ const TechPage = () => {
                             
                                 <li className = {techStyles.post}>
                                     <Link to={`/blog/${edge.node.slug}`}>
-                                        <div>
-                                            <img
-                                            src={edge.node.image.resize.src}
-                                            alt={edge.node.image.title}
-                                            />
-                                        </div>
-                                        <h2>{edge.node.title}</h2>
-                                        <p className={techStyles.date}>{edge.node.publishedDate}</p>
-                                        <p>{edge.node.summary}</p>
+                                        <img
+                                        src={edge.node.image.resize.src}
+                                        alt={edge.node.image.title}
+                                        />
                                     </Link>
+                                    <Link to={`/blog/${edge.node.slug}`}>
+                                        <h2>{edge.node.title}</h2>
+                                    </Link>
+                                    <p className={techStyles.date}>{edge.node.publishedDate}</p>
+                                    <p>{edge.node.summary}</p>
+                                    
                                     <br/>
                                 </li>
                             

@@ -5,6 +5,7 @@
     width: 67%;
     margin-bottom: 1%;
     padding-right: 3%;
+    display: flexbox;
     border-right: solid thin black;
 }
 
@@ -17,12 +18,14 @@
 
 .econTitle {
     padding-left: 1rem;
+    margin-top: 1rem;
 }
 
 .post {
     margin: 1rem 0;
     margin-right: 0;
-    
+    padding-right: 0;
+    width: 63%;
 
     a {
         color: #111111;
@@ -36,8 +39,8 @@
         opacity: .9;
     }
 
-    a:hover {
-        color: #333333
+    h2:hover {
+        text-decoration: underline;
     }
     
     h2 {

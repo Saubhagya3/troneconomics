@@ -5,7 +5,6 @@ import equityStyles from './equity.module.scss'
 import Head from '../components/head'
 
 const EquityPage = () => {
-    const pageTitle = "Equity"
     const data = useStaticQuery(graphql`
     query {
         allContentfulBlogPost (
@@ -48,10 +47,12 @@ const EquityPage = () => {
                                         alt={edge.node.image.title}
                                         />
                                     </div>
-                                    <h2>{edge.node.title}</h2>
-                                    <p className={equityStyles.date}>{edge.node.publishedDate}</p>
-                                    <p>{edge.node.summary}</p>
                                 </Link>
+                                <Link to={`/blog/${edge.node.slug}`}>
+                                    <h2>{edge.node.title}</h2>
+                                </Link>
+                                <p className={equityStyles.date}>{edge.node.publishedDate}</p>
+                                <p>{edge.node.summary}</p>
                                 <br/>
                             </li>
                         ) : ("")

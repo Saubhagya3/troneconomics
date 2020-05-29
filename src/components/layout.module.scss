@@ -1,12 +1,12 @@
 
 .container {
-    margin: 0 auto;
+    margin: 0 ;
     width: 100%;
     margin-bottom: 180px;
     padding-left: 7vw;
-    padding-right: 7vw;
-    background: #74bbe8;
-    //  #f1f9ec; //peppermint
+    padding-right: 5vw;
+    background: white;
+    //  #f1f9ec; //peppermint  #74bbe8
 
     display: flex;
     flex-direction: column;
@@ -14,20 +14,26 @@
     
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 950px) {
     .container {
-      padding: 1rem;
+      margin: 0;
+      margin-bottom: 150px;
+      padding: 0;
     }
 }
 
 .content {
     flex-grow: 1;
     padding-top: 2vh;
-    margin-top: 150px;
+    margin-top: 163px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 750px) {
     .content {
-      margin-top: 125px;
+      margin-top: 163px;
+      width: 100%;
+      padding-left: 0;
+      margin-left: 0;
     }
   }

@@ -37,7 +37,7 @@ const Header = () => {
                 </div>
             </div>
             <div className={headerStyles.banner}>
-                <h1 style={{color: '#ffffff'}}>
+                <h1 style={{color: '#f49530'}}>
                     <Link className={headerStyles.title} to="/">
                         {data.site.siteMetadata.title}
                     </Link>. 

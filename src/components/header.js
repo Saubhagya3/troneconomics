@@ -5,7 +5,7 @@ import MobileHeader from './mobileHeader'
 import useWindowSize from '@react-hook/window-size/throttled'
 
 const Header = () => {
-    const [ width ] = useWindowSize()
+    const [ width, height ] = useWindowSize()
     const [ winWidth, setWinWidth] = useState(width);
     const breakpoint = 600;
 

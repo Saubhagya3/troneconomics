@@ -2,9 +2,15 @@ import React from 'react'
 import MobileHeader from './mobileHeader'
 import DesktopHeader from './desktopHeader'
 import window from 'global'
+import { Fragment } from 'react'
 
 const Header = () => {
-    return window.innerWidth > 550 ?  <DesktopHeader /> : <MobileHeader />
+    return (
+        <Fragment>
+            <MobileHeader />
+            <DesktopHeader />
+        </Fragment>
+    )
 }        
 
 export default Header

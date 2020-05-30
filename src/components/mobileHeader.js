@@ -17,8 +17,8 @@ const MobileHeader = () => {
     return(
         <header>
             <div className={mobileHeaderStyles.main}>
-                <div className={mobileHeaderStyles.sidebarButton}>
-                    <img src={sideText} style={{height: "2rem", width: "2.5rem"}}/>
+                <div className={mobileHeaderStyles.sidebarButton} onClick={handleSideBarClick}>
+                    <img src={sideText} style={{height: "2rem", width: "2.4rem"}}/>
                 </div>
                 <div className={mobileHeaderStyles.title}><h1><Link to='/'>TronEcon.</Link></h1></div>
             </div>

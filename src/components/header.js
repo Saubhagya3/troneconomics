@@ -6,16 +6,16 @@ import useWindowSize from '@react-hook/window-size/throttled'
 
 const Header = () => {
     const [ width, height ] = useWindowSize()
-    const [ winWidth, setWinWidth] = useState(width);
-    const breakpoint = 600;
+    // const [ winWidth, setWinWidth] = useState(width);
+    const breakpoint = 550;
 
-    useEffect(() => {
-        const handleWindowResize = () => setWinWidth(window.innerWidth)
-        window.addEventListener("resize", handleWindowResize);
+    // useEffect(() => {
+    //     const handleWindowResize = () => setWinWidth(window.innerWidth)
+    //     window.addEventListener("resize", handleWindowResize);
 
-        // Return a function from the effect that removes the event listener
-        return () => window.removeEventListener("resize", handleWindowResize);
-    }, []);
+    //     // Return a function from the effect that removes the event listener
+    //     return () => window.removeEventListener("resize", handleWindowResize);
+    // }, []);
 
     const data = useStaticQuery(graphql`
         query {
@@ -27,7 +27,7 @@ const Header = () => {
             }
         }
     `) 
-    return winWidth > breakpoint ? 
+    return width > breakpoint ? 
         <header className={headerStyles.header}>
             <div className={headerStyles.ticker}>
                 <div className={headerStyles.tickerItem}>

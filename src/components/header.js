@@ -4,8 +4,8 @@ import headerStyles from './header.module.scss'
 import MobileHeader from './mobileHeader'
 
 const Header = () => {
-    const [width, setWidth] = useState(1000);
-    const breakpoint = 600;
+    const [width, setWidth] = useState(2000);
+    const breakpoint = 800;
 
     useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)

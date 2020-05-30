@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import headerStyles from './header.module.scss'
+import MobileHeader from './mobileHeader'
 
 const Header = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const breakpoint = 600;
+
+    useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+
+        // Return a function from the effect that removes the event listener
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
     const data = useStaticQuery(graphql`
         query {
             site {
@@ -11,16 +23,11 @@ const Header = () => {
                     author
                 }
             }
-            allContentfulBlogPost {
-                edges {
-                    node {
-                        page
-                    }
-                }
-            }
         }
     `) 
-    return(
+    return width < breakpoint ? 
+        <MobileHeader /> 
+        :
         <header className={headerStyles.header}>
             <div className={headerStyles.ticker}>
                 <div className={headerStyles.tickerItem}>
@@ -37,7 +44,7 @@ const Header = () => {
                 </div>
             </div>
             <div className={headerStyles.banner}>
-                <h1 style={{color: '#f49530'}}>
+                <h1 style={{color: '#f49530', marginBottom: '0'}}>
                     <Link className={headerStyles.title} to="/">
                         {data.site.siteMetadata.title}
                     </Link>. 
@@ -66,7 +73,6 @@ const Header = () => {
                 </div> */}
             </div>
         </header>
-    )
-}
+}        
 
 export default Header

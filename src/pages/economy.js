@@ -43,10 +43,10 @@ const EconomyPage = () => {
                         edge.node.page === "economy" ? 
                         (<li className={economyStyles.post}>
                             <Link to={`/blog/${edge.node.slug}`}>
-                                    <img
-                                    src={edge.node.image.resize.src}
-                                    alt={edge.node.image.title}
-                                    />
+                              <img
+                              src={edge.node.image.resize.src}
+                              alt={edge.node.image.title}
+                              />
                             </Link>
                             <Link to={`/blog/${edge.node.slug}`}>
                                 <h2>{edge.node.title}</h2>

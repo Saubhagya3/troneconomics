@@ -13,12 +13,14 @@ const IndexPage = () => {
     const [ left, setLeft ] = useState(indexStyles.left)
     const [ buttonText, setButtonText ] = useState('Show More')
     const [ clicked, setClicked ] = useState(false)
+
     const onClick1 = () => {
         setClicked(!clicked)
         clicked ? setButtonText('Show More') : setButtonText('Show Less')
         clicked ? setMiddle(indexStyles.middle) : setMiddle(indexStyles.middle2)
         clicked ? setLeft(indexStyles.left) : setLeft(indexStyles.left2)
     }
+
     const data = useStaticQuery(graphql`
     query {
         allContentfulBlogPost (
@@ -103,7 +105,6 @@ const IndexPage = () => {
                                     </Link>
                                     <p>{edge.node.summary}</p>
                                     <p className={indexStyles.date}>{edge.node.publishedDate}</p>
-                                    
                                     <br/>
                                 </li> : ("")
                             )

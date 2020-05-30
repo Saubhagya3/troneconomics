@@ -4,7 +4,7 @@ import headerStyles from './header.module.scss'
 import MobileHeader from './mobileHeader'
 
 const Header = () => {
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(1000);
     const breakpoint = 600;
 
     useEffect(() => {

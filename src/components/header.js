@@ -4,7 +4,6 @@ import DesktopHeader from './desktopHeader'
 import useWindowSize from '@react-hook/window-size/throttled'
 
 const Header = () => {
-    const [ width ] = useWindowSize()
     const [ winWidth, setWinWidth] = useState(1000);
     const breakpoint = 550;
 

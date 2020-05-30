@@ -9,6 +9,12 @@
     background-size: cover;
 }
 
+@media screen and (max-width: 550px) {
+    .header {
+      display: none;
+    }
+  }
+
 @media screen and (max-width: 1000px) {
     .header {
       height: 130px;

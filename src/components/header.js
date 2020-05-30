@@ -5,13 +5,12 @@ import useWindowSize from '@react-hook/window-size/throttled'
 
 const Header = () => {
     const [ width ] = useWindowSize()
-    const [ winWidth, setWinWidth] = useState(width);
+    const [ winWidth, setWinWidth] = useState(1000);
     const breakpoint = 550;
 
     useEffect(() => {
         const handleWindowResize = () => setWinWidth(window.innerWidth)
         window.addEventListener("resize", handleWindowResize);
-
         // Return a function from the effect that removes the event listener
         return () => window.removeEventListener("resize", handleWindowResize);
     }, []);

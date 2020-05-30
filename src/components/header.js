@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import headerStyles from './header.module.scss'
 import MobileHeader from './mobileHeader'
+import useWindowSize from '@react-hook/window-size/throttled'
 
 const Header = () => {
-    const [width, setWidth] = useState(2000);
-    const breakpoint = 800;
+    const [ width ] = useWindowSize()
+    const [ winWidth, setWinWidth] = useState(width);
+    const breakpoint = 600;
 
     useEffect(() => {
-        const handleWindowResize = () => setWidth(window.innerWidth)
+        const handleWindowResize = () => setWinWidth(window.innerWidth)
         window.addEventListener("resize", handleWindowResize);
 
         // Return a function from the effect that removes the event listener
@@ -25,9 +27,7 @@ const Header = () => {
             }
         }
     `) 
-    return width < breakpoint ? 
-        <MobileHeader /> 
-        :
+    return winWidth > breakpoint ? 
         <header className={headerStyles.header}>
             <div className={headerStyles.ticker}>
                 <div className={headerStyles.tickerItem}>
@@ -73,6 +73,8 @@ const Header = () => {
                 </div> */}
             </div>
         </header>
+        :
+        <MobileHeader /> 
 }        
 
 export default Header

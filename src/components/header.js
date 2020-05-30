@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
 import MobileHeader from './mobileHeader'
 import DesktopHeader from './desktopHeader'
 import useWindowSize from '@react-hook/window-size/throttled'

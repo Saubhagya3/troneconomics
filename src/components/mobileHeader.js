@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import mobileHeaderStyles from './mobileHeader.module.scss'
 import menuIcon1 from '../images/menu-icon.png'
 import menuIcon2 from '../images/close-menu-icon.png'

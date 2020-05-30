@@ -13,16 +13,13 @@ const MobileHeader = () => {
         clicked ? setNavList(mobileHeaderStyles.navList) : setNavList(mobileHeaderStyles.navList2)
         clicked ? setSideText(menuIcon1) : setSideText(menuIcon2)
     }
-    const handleMenuAnimation= () => {
-
-    }
 
     return(
         <header>
             <div className={mobileHeaderStyles.main}>
-                <Link to='#' className={mobileHeaderStyles.sidebarButton} onClick={handleSideBarClick}>
+                <div className={mobileHeaderStyles.sidebarButton}>
                     <img src={sideText} style={{height: "2rem", width: "2.5rem"}}/>
-                </Link>
+                </div>
                 <div className={mobileHeaderStyles.title}><h1><Link to='/'>TronEcon.</Link></h1></div>
             </div>
             <nav>

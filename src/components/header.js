@@ -4,8 +4,8 @@ import DesktopHeader from './desktopHeader'
 import useWindowSize from '@react-hook/window-size/throttled'
 
 const Header = () => {
-    const [ winWidth, setWinWidth] = useState(1000);
-    const breakpoint = 550;
+    const [ winWidth, setWinWidth] = useState(window.innerWidth);
+    const breakpoint = 600;
 
     useEffect(() => {
         const handleWindowResize = () => setWinWidth(window.innerWidth)

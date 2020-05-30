@@ -15,7 +15,7 @@ const MobileHeader = () => {
     }
 
     return(
-        <header>
+        <header className={mobileHeaderStyles.mheader}>
             <div className={mobileHeaderStyles.mmain}>
                 <div className={mobileHeaderStyles.msidebarButton} onClick={handleSideBarClick}>
                     <img src={sideText} style={{height: "2rem", width: "2.4rem"}}/>

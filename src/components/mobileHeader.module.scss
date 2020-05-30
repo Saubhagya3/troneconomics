@@ -1,5 +1,5 @@
 
-    header {
+    .mheader {
         position: sticky;
         top: 0;
         height: 13vh;
@@ -76,6 +76,12 @@
         }
         
     }
+
+    @media screen and (min-width: 550px) {
+        .mheader {
+            display: none;
+        }
+        }
 
     .mnavItem {
         margin-top: 0;

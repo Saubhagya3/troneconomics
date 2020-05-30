@@ -27,9 +27,7 @@ const Header = () => {
             }
         }
     `) 
-    return width < breakpoint ? 
-        <MobileHeader />
-        :
+    return width > breakpoint ? 
         <header className={headerStyles.header}>
             <div className={headerStyles.ticker}>
                 <div className={headerStyles.tickerItem}>
@@ -75,6 +73,8 @@ const Header = () => {
                 </div> */}
             </div>
         </header>
+        :
+        <MobileHeader />
 }        
 
 export default Header

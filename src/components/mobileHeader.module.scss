@@ -22,8 +22,15 @@
             padding: 11px 8px;
             padding-top: 17px;
         }
-        .msidebarButton:hover{
-            transition-duration: .8s;
+
+        .msidebarButton:active{
+            animation: rot .9s 2;
+        }
+
+        @keyframes rot {
+            100% {
+              transform: rotate(360deg);
+            }
         }
 
         .mtitle {
@@ -40,7 +47,7 @@
             a{
                 margin-bottom: 0;
                 color: goldenrod;
-                margin-left: -19px;
+                margin-left: -22px;
             }
         }
 
@@ -51,6 +58,7 @@
             padding-top:0;
             margin-right: 0;
             width: 7px;
+            transition-duration: .8s;
 
             .mnavList {
                 margin-right: 0;
@@ -78,13 +86,16 @@
             padding-top:0;
             margin-right: 0;
             max-width: 100%;
-            z-index: 10;
+            z-index: -1;
+            background: rgba(0, 0, 0, 0.4);
+            transition-duration: .8s;
 
             .mnavList2 {
                 z-index: 300;
                 width: 60%;
                 margin-left: 0;
                 padding-right: 0;
+                opacity: 1;
                 margin-right:0;
                 padding-top: 80px;
                 text-align: center;

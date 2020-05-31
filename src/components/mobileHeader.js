@@ -15,16 +15,9 @@ const MobileHeader = () => {
         setMClicked(!mclicked)
         mclicked ? setMNav(mobileHeaderStyles.mNav) : setMNav(mobileHeaderStyles.mNav2)
         mclicked ? setMNavList(mobileHeaderStyles.mnavList) : setMNavList(mobileHeaderStyles.mnavList2)
-        mclicked ? setSideText(menuIcon1) : setSideText(menuIcon2)
     }
 
     const handleOutClick = () => {
-        setMNav(mobileHeaderStyles.mNav)
-        setMNavList(mobileHeaderStyles.mnavList)
-        setSideText(menuIcon1)
-    }
-
-    const handleDrag = () => {
         setMNav(mobileHeaderStyles.mNav)
         setMNavList(mobileHeaderStyles.mnavList)
         setSideText(menuIcon1)
@@ -34,11 +27,14 @@ const MobileHeader = () => {
         <header className={mobileHeaderStyles.mheader}>
             <div className={mobileHeaderStyles.mmain}>
                 <div className={mobileHeaderStyles.msidebarButton} onClick={handleSideBarClick}>
-                    <img src={sideText} style={{height: "1.7rem", width: "1.7rem", margin:'0', padding: '0'}}/>
+                    <img 
+                        src={sideText} 
+                        style={{height: "1.7rem", width: "1.7rem", margin:'0', padding: '0'}}
+                    />
                 </div>
                 <div className={mobileHeaderStyles.mtitle}><h1><Link to='/'>TronEcon.</Link></h1></div>
             </div>
-            <nav className={mNav} onClick={handleOutClick} onDrag={handleDrag}>
+            <nav className={mNav} onClick={handleOutClick}>
                 <ul className={mnavList}>
                     <li>
                         <h3><Link to="/" className={mobileHeaderStyles.mnavItem} activeClassName={mobileHeaderStyles.mactiveNavItem}>Home</Link></h3>

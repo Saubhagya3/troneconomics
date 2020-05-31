@@ -4,12 +4,16 @@
     padding-left: 1rem;
     width: 67%;
     margin-bottom: 1%;
+    padding-right: 3%;
+    display: flexbox;
     border-right: solid thin black;
 }
 
 @media screen and (max-width: 600px) {
     .posts {
       width: 100%;
+      padding: 0;
+      margin: 0;
       border: none;
     }
 }

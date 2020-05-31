@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import mobileHeaderStyles from './mobileHeader.module.scss'
 import menuIcon1 from '../images/menu-icon.png'
 import menuIcon2 from '../images/close-menu-icon.png'
+import { useEffect } from 'react'
 
 const MobileHeader = () => {
     const [ mnavList, setMNavList ] = useState(mobileHeaderStyles.mnavList)
@@ -23,6 +24,12 @@ const MobileHeader = () => {
         setSideText(menuIcon1)
     }
 
+    const handleDrag = () => {
+        setMNav(mobileHeaderStyles.mNav)
+        setMNavList(mobileHeaderStyles.mnavList)
+        setSideText(menuIcon1)
+    }
+
     return(
         <header className={mobileHeaderStyles.mheader}>
             <div className={mobileHeaderStyles.mmain}>
@@ -31,7 +38,7 @@ const MobileHeader = () => {
                 </div>
                 <div className={mobileHeaderStyles.mtitle}><h1><Link to='/'>TronEcon.</Link></h1></div>
             </div>
-            <nav className={mNav} onClick={handleOutClick}>
+            <nav className={mNav} onClick={handleOutClick} onDrag={handleDrag}>
                 <ul className={mnavList}>
                     <li>
                         <h3><Link to="/" className={mobileHeaderStyles.mnavItem} activeClassName={mobileHeaderStyles.mactiveNavItem}>Home</Link></h3>

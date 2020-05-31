@@ -6,8 +6,6 @@ import Head from '../components/head'
 import TopPost from '../components/topPost'
 import BreakingPost from '../components/breakingPost'
 
-export const pageTitle = "Index"
-
 const IndexPage = () => {
     const [ middle, setMiddle ] = useState(indexStyles.middle)
     const [ left, setLeft ] = useState(indexStyles.left)

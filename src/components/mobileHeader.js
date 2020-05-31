@@ -29,7 +29,7 @@ const MobileHeader = () => {
                 <div className={mobileHeaderStyles.msidebarButton} onClick={handleSideBarClick}>
                     <img 
                         src={sideText} 
-                        style={{height: "1.7rem", width: "1.7rem", margin:'0', padding: '0'}}
+                        style={{height: "3rem", width: "3rem", margin:'0', padding: '0'}}
                     />
                 </div>
                 <div className={mobileHeaderStyles.mtitle}><h1><Link to='/'>TronEcon.</Link></h1></div>

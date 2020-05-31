@@ -20,7 +20,7 @@
     // border-bottom: solid black thin;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 900px) {
     .main {
         width: 100%;
         padding-left: 0;
@@ -49,6 +49,12 @@
             float:left;
         }
 
+        @media screen and (max-width: 900px) {
+            .image {
+                width: 100%;
+            }
+        }
+
         .text {
             margin-left: 20px;
             float:right;
@@ -62,7 +68,7 @@
                 font-size: smaller;
             }
 
-            @media screen and (max-width: 880px) {
+            @media screen and (max-width: 900px) {
                 .pageTitle {
                     margin-bottom: 2%;
                 }
@@ -73,7 +79,7 @@
                 margin-bottom: 0;
             }
 
-            @media screen and (max-width: 880px) {
+            @media screen and (max-width: 900px) {
                 h2 {
                     font-size: 1.2rem;
                 }
@@ -83,20 +89,20 @@
                 padding-top: 14%;
             }
 
-            @media screen and (max-width: 800px) {
+            @media screen and (max-width: 900px) {
                 .summ {
                     padding-top: 2%;
                 }
             }
 
-            @media screen and (max-width: 800px) {
+            @media screen and (max-width: 600px) {
                 .summ {
                     display: none;
                 }
             }
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 900px) {
             .text {
                 display: contents;
                 width: 100%;
@@ -107,10 +113,11 @@
         
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
         .boxstyle {
             width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
             display: grid;
+            
         }
     }
 
@@ -146,10 +153,18 @@
         font-size: .9rem;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 600px) {
         .date {
             display: none;
         }
     }
 
+    @media screen and (max-width: 900px) {
+        a {
+            justify-content: center;
+        align-items: center;
+        text-align: center;
+        }
+    }
 }
+

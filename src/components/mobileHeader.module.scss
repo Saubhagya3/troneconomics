@@ -2,7 +2,7 @@
     .mheader {
         position: sticky;
         top: 0;
-        height: 9vh;
+        height: 11vh;
         display: block;
         background: whitesmoke;
         
@@ -10,7 +10,7 @@
         .mmain{
         z-index: 5; 
         max-width: 100%;
-        height: 9vh;
+        height: 11vh;
         margin-top:0;
         -webkit-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
         -moz-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
@@ -41,13 +41,13 @@
             h1 {
                 margin:0;
                 padding:0;
-                margin-top: 8px;
+                margin-top: 9px;
             }
 
             a{
                 margin-bottom: 0;
                 color: goldenrod;
-                margin-left: -22px;
+                margin-left: -25px;
             }
         }
 

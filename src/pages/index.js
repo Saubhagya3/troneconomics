@@ -116,7 +116,7 @@ const IndexPage = () => {
                         {data.allContentfulBlogPost.edges.map(edge => {
                             return(
                                 <li className={indexStyles.post}>
-                                    <Link to='/#'>
+                                    <Link to='#'>
                                         <h2>Graph Item</h2>
                                     </Link>
                                     <br/>

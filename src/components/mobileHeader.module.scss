@@ -2,7 +2,7 @@
     .mheader {
         position: sticky;
         top: 0;
-        height: 10vh;
+        height: 9vh;
         display: block;
         background: whitesmoke;
         
@@ -10,8 +10,7 @@
         .mmain{
         z-index: 5; 
         max-width: 100%;
-        height: 10vh;
-        
+        height: 9vh;
         margin-top:0;
         }
 
@@ -25,8 +24,9 @@
 
         .mtitle {
             text-align: center;
-            padding-top: 6px;
+            padding: 4px;
             margin: 0;
+            margin-top: 4px;
             
             h1 {
                 margin:0;
@@ -39,23 +39,22 @@
             }
         }
 
-        nav {
-            width: 60%;
+        .mNav {
             padding-left: 0;
             padding-right: 0;
             margin-top:0;
-            z-index: 300;
             margin-right: 0;
+            width: 0;
 
             .mnavList {
                 margin-right: 0;
                 margin-left: -300px;
                 padding-top: 80px;
                 text-align: center;
-                background: #555555;
+                background: whitesmoke;
                 height: 99vh;
                 width: 300px;
-                opacity: .4;
+                opacity: .3;
                 list-style-type: none;
                 transition-duration: .8s;
 
@@ -64,15 +63,27 @@
                     text-decoration: none;
                 }
             }
+        }
+
+        .mNav2 {
+            padding-left: 0;
+            padding-right: 0;
+            margin-top:0;
+            margin-right: 0;
+            max-width: 100%;
+            z-index: 20;
 
             .mnavList2 {
+                z-index: 300;
+                width: 60%;
                 margin-left: 0;
+                padding-right: 0;
+                margin-right:0;
                 padding-top: 80px;
                 text-align: center;
                 background:whitesmoke;
                 height: 99vh;
                 width: 300px;
-                opacity: .97;
                 transition-duration: .8s;
                 list-style-type: none;
 
@@ -81,9 +92,7 @@
                     margin-top: 25px;
                 }
             }
-            
         }
-        
     }
 
     @media screen and (min-width: 550px) {

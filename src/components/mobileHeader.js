@@ -6,12 +6,21 @@ import menuIcon2 from '../images/close-menu-icon.png'
 
 const MobileHeader = () => {
     const [ mnavList, setMNavList ] = useState(mobileHeaderStyles.mnavList)
+    const [ mNav, setMNav] = useState(mobileHeaderStyles.mNav)
     const [ sideText, setSideText ] = useState(menuIcon1)
     const  [ mclicked, setMClicked ] = useState(false)
+
     const handleSideBarClick = () => {
         setMClicked(!mclicked)
+        mclicked ? setMNav(mobileHeaderStyles.mNav) : setMNav(mobileHeaderStyles.mNav2)
         mclicked ? setMNavList(mobileHeaderStyles.mnavList) : setMNavList(mobileHeaderStyles.mnavList2)
         mclicked ? setSideText(menuIcon1) : setSideText(menuIcon2)
+    }
+
+    const handleOutClick = () => {
+        setMNav(mobileHeaderStyles.mNav)
+        setMNavList(mobileHeaderStyles.mnavList)
+        setSideText(menuIcon1)
     }
 
     return(
@@ -22,7 +31,7 @@ const MobileHeader = () => {
                 </div>
                 <div className={mobileHeaderStyles.mtitle}><h1><Link to='/'>TronEcon.</Link></h1></div>
             </div>
-            <nav>
+            <nav className={mNav} onClick={handleOutClick}>
                 <ul className={mnavList}>
                     <li>
                         <h3><Link to="/" className={mobileHeaderStyles.mnavItem} activeClassName={mobileHeaderStyles.mactiveNavItem}>Home</Link></h3>

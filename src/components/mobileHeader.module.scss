@@ -74,6 +74,8 @@
 
                 li {
                     margin-top: 25px;
+                    transition-duration: .8s;
+                    opacity: 0;
                     text-decoration: none;
                 }
             }
@@ -111,6 +113,8 @@
                 li {
                     text-decoration: none;
                     margin-top: 25px;
+                    opacity: 1;
+                    transition-duration: .8s;
                 }
             }
         }
@@ -124,9 +128,9 @@
 
     .mnavItem {
         margin-top: 0;
+        padding: 3px 40px;
         a {
             margin-top: 30px;
-            padding: 0;
             text-decoration: none;
         }
     }

@@ -9,9 +9,11 @@
     border-right: solid thin black;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 600px) {
     .posts {
       width: 100%;
+      padding: 0;
+      margin: 0;
       border: none;
     }
 }
@@ -35,6 +37,12 @@
         margin-right: 1rem;
     }
 
+    @media screen and (max-width: 600px) {
+        a {
+          margin:0;
+        }
+    }
+
     img:hover {
         opacity: .9;
     }
@@ -51,5 +59,19 @@
         color: #333333;
         padding-top: 3px;
         font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .post {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0;
+      text-align: center;
+
+      img:hover {
+        opacity: 1;
+        }
     }
 }

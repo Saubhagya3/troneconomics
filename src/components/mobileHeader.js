@@ -20,6 +20,7 @@ const MobileHeader = () => {
     }
 
     const handleOutClick = () => {
+        setMClicked(!mclicked)
         setSideText(menuIcon1)
         setMNav(mobileHeaderStyles.mNav)
         setMNavList(mobileHeaderStyles.mnavList)

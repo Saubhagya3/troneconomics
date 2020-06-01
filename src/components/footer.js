@@ -16,14 +16,13 @@ const Footer = () => {
 
     return(
         <footer className={footerStyles.footer}>
+          <div className={footerStyles.overlay}>
             <div className={footerStyles.top}>
                 <div className={footerStyles.left}>
                     <h3>{data.site.siteMetadata.title}</h3>
                     <p>Created by <a href="https://twitter.com/SaubhagyaThapa3" target="_blank">{data.site.siteMetadata.author}</a>, © 2020</p>
                 </div>
                 <div className={footerStyles.right}>
-
-                   
                     <ul>
                         <li>
                             <h3>Information</h3>
@@ -93,7 +92,7 @@ const Footer = () => {
     </div>
             
             </div>
-            
+        </div>    
         </footer>
     )
 }

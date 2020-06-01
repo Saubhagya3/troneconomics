@@ -19,9 +19,9 @@ const MobileHeader = () => {
     }
 
     const handleOutClick = () => {
+        setSideText(menuIcon1)
         setMNav(mobileHeaderStyles.mNav)
         setMNavList(mobileHeaderStyles.mnavList)
-        setSideText(menuIcon1)
     }
 
     return(

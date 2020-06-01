@@ -5,12 +5,15 @@
     margin-bottom: 180px;
     padding-left: 5vw;
     padding-right: 5vw;
-    background: whitesmoke;
+    background: white;
     //  #f1f9ec; //peppermint  #74bbe8
 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    -webkit-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
+        box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
     
 }
 
@@ -19,6 +22,7 @@
       margin: 0;
       margin-bottom: 150px;
       padding: 0;
+      background: whitesmoke;
     }
 }
 

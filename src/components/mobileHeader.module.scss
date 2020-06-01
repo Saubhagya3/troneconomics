@@ -2,7 +2,7 @@
     .mheader {
         position: sticky;
         top: 0;
-        height: 11vh;
+        height: 90px;
         display: block;
         background: whitesmoke;
         
@@ -10,7 +10,7 @@
         .mmain{
         z-index: 5; 
         max-width: 100%;
-        height: 11vh;
+        height: 90px;
         margin-top:0;
         -webkit-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
         -moz-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
@@ -25,7 +25,7 @@
         }
 
         .msidebarButton:active{
-            animation: rot .9s 2;
+            animation: rot .7s;
         }
 
         @keyframes rot {
@@ -59,7 +59,7 @@
             padding-top:0;
             margin-right: 0;
             width: 7px;
-            transition-duration: .8s;
+            transition-duration: .5s;
 
             .mnavList {
                 margin-right: 0;
@@ -71,11 +71,11 @@
                 width: 300px;
                 opacity: .3;
                 list-style-type: none;
-                transition-duration: .8s;
+                transition-duration: .5s;
 
                 li {
                     margin-top: 25px;
-                    transition-duration: .8s;
+                    transition-duration: .5s;
                     opacity: 0;
                     text-decoration: none;
                 }
@@ -91,7 +91,7 @@
             max-width: 100%;
             z-index: -1;
             background: rgba(0, 0, 0, 0.4);
-            transition-duration: .8s;
+            transition-duration: .5s;
 
             .mnavList2 {
                 z-index: 300;
@@ -105,7 +105,7 @@
                 background:whitesmoke;
                 height: 99vh;
                 width: 300px;
-                transition-duration: .8s;
+                transition-duration: .5s;
                 list-style-type: none;
                 -webkit-box-shadow: 4px 18px 15px 2px rgba(0,0,0,0.5);
                 -moz-box-shadow: 4px 18px 15px 2px rgba(0,0,0,0.5);
@@ -115,7 +115,7 @@
                     text-decoration: none;
                     margin-top: 25px;
                     opacity: 1;
-                    transition-duration: .8s;
+                    transition-duration: .5s;
                 }
             }
         }

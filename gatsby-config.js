@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: 'Tron Economics',
-    author: 'Saubhagya Thapa'
+    author: 'Saubhagya'
   },
 
   plugins: [

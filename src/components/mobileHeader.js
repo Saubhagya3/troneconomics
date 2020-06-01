@@ -10,6 +10,7 @@ const MobileHeader = () => {
     const [ mNav, setMNav] = useState(mobileHeaderStyles.mNav)
     const [ sideText, setSideText ] = useState(menuIcon1)
     const  [ mclicked, setMClicked ] = useState(false)
+    const [ wobble, setWobble ] = useState(0)
 
     const handleSideBarClick = () => {
         setMClicked(!mclicked)
@@ -27,10 +28,16 @@ const MobileHeader = () => {
     return(
         <header className={mobileHeaderStyles.mheader}>
             <div className={mobileHeaderStyles.mmain}>
-                <div className={mobileHeaderStyles.msidebarButton} onClick={handleSideBarClick}>
+                <div 
+                    className={mobileHeaderStyles.msidebarButton} 
+                    onClick={handleSideBarClick}
+                >
                     <img 
                         src={sideText} 
                         style={{height: "2.2rem", width: "2.2rem", margin:'0', padding: '0'}}
+                        onClick={() => setWobble(1)}
+                        onAnimationEnd={() => setWobble(0)}
+                        wobble={wobble}
                     />
                 </div>
                 <div className={mobileHeaderStyles.mtitle}><h1><Link to='/'>TronEcon.</Link></h1></div>

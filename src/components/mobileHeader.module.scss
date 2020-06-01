@@ -21,18 +21,23 @@
             float: left;
             padding-left: 2vh;
             padding-right: 2vh;
-            padding-top: 3.8vh;
-        }
+            padding-top: 4.6vh;
 
-        .msidebarButton:active{
-            animation: rot .7s;
-        }
+            img[wobble='1']{
+                animation: wobble .5s 1;
+            }
 
-        @keyframes rot {
-            100% {
-              transform: rotate(180deg);
+            @keyframes wobble {
+                0% {
+                    transform: rotate(-90deg);
+                }
+                100% {
+                    transform: rotate(0deg);
+                }
             }
         }
+
+        
 
         .mtitle {
             text-align: center;

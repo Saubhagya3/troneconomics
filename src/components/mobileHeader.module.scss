@@ -1,150 +1,149 @@
 
-    .mheader {
-        position: sticky;
-        top: 0;
-        height: 90px;
-        display: block;
-        background: white;
+.mheader {
+    position: sticky;
+    top: 0;
+    height: 90px;
+    display: block;
+    background: white;
+    
+    .mmain{
+    z-index: 5; 
+    max-width: 100%;
+    height: 90px;
+    margin-top:0;
+    -webkit-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
+    box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
+    }
+
+    .msidebarButton{
+        float: left;
+        padding-left: 2vh;
+        padding-right: 2vh;
+        padding-top: 3.7vh;
+
+        img[wobble='1']{
+            animation: wobble .5s 1;
+        }
+
+        @keyframes wobble {
+            0% {
+                transform: rotate(-90deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    .mtitle {
+        text-align: center;
+        padding: 4px;
+        margin: 0;
         
-        .mmain{
-        z-index: 5; 
-        max-width: 100%;
-        height: 90px;
+        h1 {
+            margin:0;
+            padding:0;
+            margin-top: 2.9vh;
+        }
+
+        a{
+            margin-bottom: 0;
+            color: goldenrod;
+            margin-right: 50px;
+        }
+    }
+
+    .mNav {
+        padding-left: 0;
+        padding-right: 0;
         margin-top:0;
-        -webkit-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
-        -moz-box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
-        box-shadow: 0px 8px 18px -8px rgba(0,0,0,0.5);
-        }
+        padding-top:0;
+        margin-right: 0;
+        width: 7px;
+        transition-duration: .5s;
 
-        .msidebarButton{
-            float: left;
-            padding-left: 2vh;
-            padding-right: 2vh;
-            padding-top: 3.7vh;
-
-            img[wobble='1']{
-                animation: wobble .5s 1;
-            }
-
-            @keyframes wobble {
-                0% {
-                    transform: rotate(-90deg);
-                }
-                100% {
-                    transform: rotate(0deg);
-                }
-            }
-        }
-
-        .mtitle {
+        .mnavList {
+            margin-right: 0;
+            margin-left: -300px;
+            padding-top: 80px;
             text-align: center;
-            padding: 4px;
-            margin: 0;
-            
-            h1 {
-                margin:0;
-                padding:0;
-                margin-top: 2.9vh;
-            }
-
-            a{
-                margin-bottom: 0;
-                color: goldenrod;
-                margin-right: 50px;
-            }
-        }
-
-        .mNav {
-            padding-left: 0;
-            padding-right: 0;
-            margin-top:0;
-            padding-top:0;
-            margin-right: 0;
-            width: 7px;
+            background: whitesmoke;
+            height: 99vh;
+            width: 300px;
+            opacity: .3;
+            list-style-type: none;
             transition-duration: .5s;
 
-            .mnavList {
-                margin-right: 0;
-                margin-left: -300px;
-                padding-top: 80px;
-                text-align: center;
-                background: whitesmoke;
-                height: 99vh;
-                width: 300px;
-                opacity: .3;
-                list-style-type: none;
+            li {
+                margin-top: 25px;
                 transition-duration: .5s;
-
-                li {
-                    margin-top: 25px;
-                    transition-duration: .5s;
-                    opacity: 0;
-                    text-decoration: none;
-                }
+                opacity: 0;
+                text-decoration: none;
             }
         }
+    }
 
-        .mNav2 {
-            padding-left: 0;
+    .mNav2 {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top:0;
+        padding-top:0;
+        margin-right: 0;
+        max-width: 100%;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.4);
+        transition-duration: .5s;
+
+        .mnavList2 {
+            z-index: 300;
+            width: 60%;
+            margin-left: 0;
             padding-right: 0;
-            margin-top:0;
-            padding-top:0;
-            margin-right: 0;
-            max-width: 100%;
-            z-index: -1;
-            background: rgba(0, 0, 0, 0.4);
+            opacity: 1;
+            margin-right:0;
+            padding-top: 80px;
+            text-align: center;
+            background:whitesmoke;
+            height: 99vh;
+            width: 300px;
             transition-duration: .5s;
+            list-style-type: none;
+            -webkit-box-shadow: 4px 18px 15px 2px rgba(0,0,0,0.5);
+            -moz-box-shadow: 4px 18px 15px 2px rgba(0,0,0,0.5);
+            box-shadow: 4px 18px 15px 2px rgba(0,0,0,0.5);
 
-            .mnavList2 {
-                z-index: 300;
-                width: 60%;
-                margin-left: 0;
-                padding-right: 0;
+            li {
+                text-decoration: none;
+                margin-top: 25px;
                 opacity: 1;
-                margin-right:0;
-                padding-top: 80px;
-                text-align: center;
-                background:whitesmoke;
-                height: 99vh;
-                width: 300px;
                 transition-duration: .5s;
-                list-style-type: none;
-                -webkit-box-shadow: 4px 18px 15px 2px rgba(0,0,0,0.5);
-                -moz-box-shadow: 4px 18px 15px 2px rgba(0,0,0,0.5);
-                box-shadow: 4px 18px 15px 2px rgba(0,0,0,0.5);
-
-                li {
-                    text-decoration: none;
-                    margin-top: 25px;
-                    opacity: 1;
-                    transition-duration: .5s;
-                }
             }
         }
     }
+}
 
-    @media screen and (min-width: 550px) {
-        .mheader {
-            display: none;
-        }
-        }
-
-    .mnavItem {
-        margin-top: 0;
-        padding: 3px 40px;
-        a {
-            margin-top: 30px;
-            text-decoration: none;
-        }
+@media screen and (min-width: 550px) {
+    .mheader {
+        display: none;
+    }
     }
 
-    .activeMNavItem {
-        color: goldenrod;
-    }
-
+.mnavItem {
+    margin-top: 0;
+    padding: 3px 40px;
+    
     a {
+        margin-top: 30px;
         text-decoration: none;
-        color: black;
     }
+}
 
+.activeMNavItem {
+    color: goldenrod;
+}
 
+a {
+    text-decoration: none;
+    color: black;
+}

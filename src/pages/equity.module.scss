@@ -60,16 +60,16 @@
     }
 }
 
-@media screen and (max-width: 600px) {
-    .post {
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      margin-right: 0;
-      text-align: center;
+    @media screen and (max-width: 600px) {
+        .post {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+        text-align: center;
 
-      img:hover {
-        opacity: 1;
+        img:hover {
+            opacity: 1;
         }
     }
 }

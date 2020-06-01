@@ -21,6 +21,7 @@ const MobileHeader = () => {
 
     const handleOutClick = () => {
         setMClicked(!mclicked)
+        setWobble(1)
         setSideText(menuIcon1)
         setMNav(mobileHeaderStyles.mNav)
         setMNavList(mobileHeaderStyles.mnavList)

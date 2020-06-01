@@ -15,6 +15,7 @@ const MobileHeader = () => {
         setMClicked(!mclicked)
         mclicked ? setMNav(mobileHeaderStyles.mNav) : setMNav(mobileHeaderStyles.mNav2)
         mclicked ? setMNavList(mobileHeaderStyles.mnavList) : setMNavList(mobileHeaderStyles.mnavList2)
+        mclicked ? setSideText(menuIcon1) : setSideText(menuIcon2)
     }
 
     const handleOutClick = () => {

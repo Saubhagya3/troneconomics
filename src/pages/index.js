@@ -5,7 +5,6 @@ import indexStyles from './index.module.scss'
 import Head from '../components/head'
 import TopPost from '../components/topPost'
 import BreakingPost from '../components/breakingPost'
-import ReactGa from 'react-ga'
 
 const IndexPage = () => {
     const [ middle, setMiddle ] = useState(indexStyles.middle)
@@ -19,14 +18,7 @@ const IndexPage = () => {
         clicked ? setMiddle(indexStyles.middle) : setMiddle(indexStyles.middle2)
         clicked ? setLeft(indexStyles.left) : setLeft(indexStyles.left2)
     }
-
-    useEffect(()=>{
-        ReactGa.initialize('UA-168456053-1')
-
-        //report page view
-        ReactGa.pageview('/')
-    }, [])
-
+    
     const data = useStaticQuery(graphql`
     query {
         allContentfulBlogPost (

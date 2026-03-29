@@ -1,24 +1,25 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import economyStyles from './economy.module.scss'
+import * as economyStylesModule from './economy.module.scss'
 import Head from '../components/head'
 
 const EconomyPage = () => {
+    const economyStyles = economyStylesModule.default || economyStylesModule
+
     const data = useStaticQuery(graphql`
         query {
             allContentfulBlogPost (
-                sort: {
-                  fields:publishedDate,
-                  order:DESC
-                }
+                sort: { publishedDate: DESC }
               ){
                 edges {
                   node {
                     title
                     slug
                     publishedDate (formatString: "MMMM Do, YYYY")
-                    summary
+                    summary {
+                      summary
+                    }
                     page
                     image {
                         title
@@ -52,7 +53,7 @@ const EconomyPage = () => {
                                 <h2>{edge.node.title}</h2>
                             </Link>
                             <p className={economyStyles.date}>{edge.node.publishedDate}</p>
-                            <p>{edge.node.summary}</p>
+                            <p>{edge.node.summary?.summary}</p>
                             
                             <br/>
                         </li>) : ("")

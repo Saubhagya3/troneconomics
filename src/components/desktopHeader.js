@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import headerStyles from './desktopHeader.module.scss'
+import * as headerStylesModule from './desktopHeader.module.scss'
 
 const DesktopHeader = () => {
+    const headerStyles = headerStylesModule.default || headerStylesModule
+
     const data = useStaticQuery(graphql`
         query {
             site {

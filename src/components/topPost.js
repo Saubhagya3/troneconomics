@@ -1,22 +1,23 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import topPostStyles from './topPost.module.scss'
+import * as topPostStylesModule from './topPost.module.scss'
 
 const TopPost = () => {
+    const topPostStyles = topPostStylesModule.default || topPostStylesModule
+
     const data = useStaticQuery(graphql`
     query {
         allContentfulBlogPost (
-            sort: {
-              fields:publishedDate,
-              order:DESC
-            }
+            sort: { publishedDate: DESC }
           ){
             edges {
               node {
                 title
                 slug
                 publishedDate (formatString: "MMMM Do, YYYY")
-                summary
+                summary {
+                  summary
+                }
                 page
                 image {
                     title
@@ -49,7 +50,7 @@ const TopPost = () => {
                                         <Link to={`/blog/${edge.node.slug}`}>
                                             <h2>{edge.node.title}</h2>
                                         </Link>
-                                        <p className={topPostStyles.summ}>{edge.node.summary}</p>
+                                        <p className={topPostStyles.summ}>{edge.node.summary?.summary}</p>
                                         <p className={topPostStyles.date}>{edge.node.publishedDate}</p>
                                     </div>
                                 </div>

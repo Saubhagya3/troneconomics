@@ -1,26 +1,24 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import breakingPostStyles from './breakingPost.module.scss'
+import * as breakingPostStylesModule from './breakingPost.module.scss'
 
 const BreakingPost = () => {
+    const breakingPostStyles = breakingPostStylesModule.default || breakingPostStylesModule
+
     const data = useStaticQuery(graphql`
     query {
         allContentfulBlogPost (
-            sort: {
-              fields:publishedDate,
-              order:DESC
-            }
+            sort: { publishedDate: DESC }
           ){
             edges {
               node {
                 title
                 slug
                 publishedDate (formatString: "MMMM Do, YYYY")
-                summary
-                page
-                body {
-                    json
+                summary {
+                  summary
                 }
+                page
                 image {
                     title
                     resize (width: 300, height: 250) {
@@ -49,7 +47,7 @@ const BreakingPost = () => {
                               <Link to={`/blog/${edge.node.slug}`}>
                                 <h2>{edge.node.title}</h2>
                               </Link>
-                              <p className={breakingPostStyles.summ}>{edge.node.summary}</p>
+                              <p className={breakingPostStyles.summ}>{edge.node.summary?.summary}</p>
                               <p className={breakingPostStyles.date}>{edge.node.publishedDate}</p>
                                 
                             </div>

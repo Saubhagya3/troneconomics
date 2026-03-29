@@ -1,24 +1,25 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import techStyles from './tech.module.scss'
+import * as techStylesModule from './tech.module.scss'
 import Head from '../components/head'
 
 const TechPage = () => {
+    const techStyles = techStylesModule.default || techStylesModule
+
     const data = useStaticQuery(graphql`
         query {
             allContentfulBlogPost (
-                sort: {
-                  fields:publishedDate,
-                  order:DESC
-                }
+                sort: { publishedDate: DESC }
               ) {
                 edges {
                     node {
                         title
                         publishedDate(formatString: "MMMM Do, YYYY")
                         page
-                        summary
+                        summary {
+                          summary
+                        }
                         slug
                         image {
                             title
@@ -52,7 +53,7 @@ const TechPage = () => {
                                         <h2>{edge.node.title}</h2>
                                     </Link>
                                     <p className={techStyles.date}>{edge.node.publishedDate}</p>
-                                    <p>{edge.node.summary}</p>
+                                    <p>{edge.node.summary?.summary}</p>
                                     
                                     <br/>
                                 </li>

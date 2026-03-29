@@ -1,24 +1,25 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql, useStaticQuery } from 'gatsby' 
-import equityStyles from './equity.module.scss'
+import * as equityStylesModule from './equity.module.scss'
 import Head from '../components/head'
 
 const EquityPage = () => {
+    const equityStyles = equityStylesModule.default || equityStylesModule
+
     const data = useStaticQuery(graphql`
     query {
         allContentfulBlogPost (
-            sort: {
-              fields:publishedDate,
-              order:DESC
-            }
+            sort: { publishedDate: DESC }
           ){
             edges {
               node {
                 title
                 slug
                 publishedDate (formatString: "MMMM Do, YYYY")
-                summary
+                summary {
+                  summary
+                }
                 page
                 image {
                     title
@@ -52,7 +53,7 @@ const EquityPage = () => {
                                     <h2>{edge.node.title}</h2>
                                 </Link>
                                 <p className={equityStyles.date}>{edge.node.publishedDate}</p>
-                                <p>{edge.node.summary}</p>
+                                <p>{edge.node.summary?.summary}</p>
                                 <br/>
                             </li>
                         ) : ("")

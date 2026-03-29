@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import mobileHeaderStyles from './mobileHeader.module.scss'
+import * as mobileHeaderStylesModule from './mobileHeader.module.scss'
 import menuIcon1 from '../images/menu-icon.png'
 import menuIcon2 from '../images/close-menu-icon.png'
 import { useEffect } from 'react'
 
 const MobileHeader = () => {
+    const mobileHeaderStyles = mobileHeaderStylesModule.default || mobileHeaderStylesModule
+
     const [ mnavList, setMNavList ] = useState(mobileHeaderStyles.mnavList)
     const [ mNav, setMNav] = useState(mobileHeaderStyles.mNav)
     const [ sideText, setSideText ] = useState(menuIcon1)

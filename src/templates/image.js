@@ -11,26 +11,20 @@ export const query = graphql`
             title
             publishedDate(formatString: "MMMM Do, YYYY")
             body { 
-                json 
+                raw
             }
         }
     }
 `
 
 const Image = (props) => {
-    const options = {
-        renderNode: {
-            "embedded-asset-block": (node) => {
-                const alt= node.data.target.fields.title['en-US']
-                const url=node.data.target.fields.file['en-US'].url
-                return <img alt={alt} src={url}/>
-            }
-        }
-    }
+    const bodyRaw = props.data.contentfulBlogPost?.body?.raw
+    const bodyDocument = bodyRaw ? JSON.parse(bodyRaw) : null
+
     return(
         <Layout>
             <div>
-                {documentToReactComponents(options)}
+                {bodyDocument ? documentToReactComponents(bodyDocument) : null}
             </div>
         </Layout>
     )
